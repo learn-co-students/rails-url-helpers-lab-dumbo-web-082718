@@ -1,1 +1,8 @@
-<h1><%= @student.to_s %></h1>
+<h1><% @students.each do |student|%>
+    <%=student.to_s%>
+  <br>
+  This student is currently <%= student.active ?  "active" : "inactive"%>.
+<br>
+</h1>
+
+<%end%>
